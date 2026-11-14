@@ -1,0 +1,45 @@
+{
+	"MIST_ADV": {
+		"Tabs": {
+			"Profile": "Profile"
+		},
+		"Settings": {
+			"Categories": {
+				"Name": "Feature categories",
+				"Label": "Categories",
+				"Hint": "Categories of adversary features. Each one is a tab of the adversary sheet; a feature is put in a category in its Settings tab."
+			}
+		},
+		"Categories": {
+			"Title": "Feature categories",
+			"Hint": "Each category is a tab of the adversary sheet, after Features; a feature is put in one in its Settings tab. Icon: a Font Awesome class, e.g. fa-solid fa-brain. Deleting a category sends its features back to Features.",
+			"Name": "Name",
+			"IconHint": "Font Awesome icon class",
+			"Up": "Up",
+			"Down": "Down",
+			"Remove": "Delete",
+			"Add": "Add category",
+			"Save": "Save",
+			"Empty": "No categories yet.",
+			"Sync": "From compendiums",
+			"SyncHint": "Give adversary features without a category the category of their compendium entry (saved categories only).",
+			"Synced": "Categories from compendiums: {count} adversary feature(s) updated."
+		},
+		"Category": {
+			"Label": "Category",
+			"None": "— (Features)",
+			"Empty": "Nothing here yet. Choose this category in a feature's Settings tab."
+		},
+		"Profile": {
+			"Religion": "Religion",
+			"ReligionPlaceholder": "Religion or faith…",
+			"Organizations": "Organizations",
+			"AddOrganization": "Add organization…",
+			"NoOrganizations": "No organizations in the world yet (The Mist Age - Geopolitics).",
+			"None": "None",
+			"Open": "Open",
+			"Remove": "Remove",
+			"Missing": "(deleted)"
+		}
+	}
+}

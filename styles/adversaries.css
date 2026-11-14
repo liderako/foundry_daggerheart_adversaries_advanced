@@ -1,0 +1,137 @@
+.mist-adv-hint {
+	font-size: var(--font-size-12);
+	opacity: 0.7;
+	font-style: italic;
+	margin: 0.25rem 0.5rem;
+}
+
+/* ---------- Category window ---------- */
+.mist-adv-categories .window-content {
+	padding: 0.5rem;
+}
+
+.mist-adv-categories-body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.mist-adv-category-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.mist-adv-category-row {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.mist-adv-category-row .preview {
+	width: 1.5em;
+	text-align: center;
+	flex: none;
+}
+
+.mist-adv-category-row input[data-field="name"] {
+	flex: 2;
+}
+
+.mist-adv-category-row input[data-field="icon"] {
+	flex: 1;
+}
+
+.mist-adv-category-row a {
+	flex: none;
+}
+
+.mist-adv-category-row a.disabled {
+	opacity: 0.25;
+	pointer-events: none;
+}
+
+.mist-adv-categories-buttons {
+	display: flex;
+	gap: 0.5rem;
+}
+
+/* ---------- Profile tab ---------- */
+.mist-adv-profile {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 0.5rem 1rem;
+	overflow-y: auto;
+}
+
+.mist-adv-profile fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	border-radius: 6px;
+	padding: 0.5rem 0.75rem;
+}
+
+.mist-adv-profile legend {
+	font-weight: bold;
+	padding: 0 0.3rem;
+}
+
+.mist-adv-profile .mist-adv-value {
+	margin: 0;
+}
+
+.mist-adv-org-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.mist-adv-org {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.mist-adv-org img {
+	width: 32px;
+	height: 32px;
+	border: none;
+	border-radius: 4px;
+	object-fit: cover;
+	flex: none;
+}
+
+.mist-adv-org .name {
+	flex: 1;
+}
+
+.mist-adv-org.missing .name {
+	opacity: 0.6;
+	font-style: italic;
+}
+
+.mist-adv-org .remove {
+	flex: none;
+	opacity: 0.6;
+}
+
+.mist-adv-org .remove:hover {
+	opacity: 1;
+}
+
+/* ---------- Category tabs: scroll like the Features tab ---------- */
+.application.sheet.daggerheart.actor.dh-style.adversary .tab.mist-adv-category .feature-section {
+	padding: 16px calc(16px - var(--scrollbar-width)) 4px 16px;
+	overflow-y: auto;
+	scrollbar-gutter: stable;
+	animation: scrollfade;
+	animation-timeline: --scrollfade;
+	animation-range: entry 0% exit 100%;
+	scroll-timeline: --scrollfade y;
+	mask-image: linear-gradient(0deg, transparent 0%, black var(--fade-end), black calc(100% - var(--fade-start)), transparent 100%);
+}

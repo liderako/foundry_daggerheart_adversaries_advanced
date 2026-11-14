@@ -1,0 +1,22 @@
+<div class="mist-adv-categories-body">
+	<p class="mist-adv-hint">{{localize "MIST_ADV.Categories.Hint"}}</p>
+	<div class="mist-adv-category-list">
+		{{#each rows as |row|}}
+			<div class="mist-adv-category-row" data-index="{{row.index}}">
+				<span class="preview"><i class="{{row.icon}}"></i></span>
+				<input type="text" data-field="name" value="{{row.name}}" placeholder="{{localize "MIST_ADV.Categories.Name"}}">
+				<input type="text" data-field="icon" data-icon-input value="{{row.icon}}" placeholder="{{@root.defaultIcon}}" data-tooltip="MIST_ADV.Categories.IconHint">
+				<a data-action="up" class="{{#if row.first}}disabled{{/if}}" data-tooltip="MIST_ADV.Categories.Up"><i class="fa-solid fa-arrow-up" inert></i></a>
+				<a data-action="down" class="{{#if row.last}}disabled{{/if}}" data-tooltip="MIST_ADV.Categories.Down"><i class="fa-solid fa-arrow-down" inert></i></a>
+				<a data-action="remove" data-tooltip="MIST_ADV.Categories.Remove"><i class="fa-solid fa-trash" inert></i></a>
+			</div>
+		{{else}}
+			<p class="mist-adv-hint">{{localize "MIST_ADV.Categories.Empty"}}</p>
+		{{/each}}
+	</div>
+	<div class="mist-adv-categories-buttons">
+		<button type="button" data-action="add"><i class="fa-solid fa-plus" inert></i> {{localize "MIST_ADV.Categories.Add"}}</button>
+		<button type="button" data-action="sync" data-tooltip="MIST_ADV.Categories.SyncHint"><i class="fa-solid fa-rotate" inert></i> {{localize "MIST_ADV.Categories.Sync"}}</button>
+		<button type="submit"><i class="fa-solid fa-floppy-disk" inert></i> {{localize "MIST_ADV.Categories.Save"}}</button>
+	</div>
+</div>

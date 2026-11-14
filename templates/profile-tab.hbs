@@ -1,0 +1,48 @@
+<section class="tab {{tabs.mistAdvProfile.cssClass}} mistAdvProfile" data-tab="mistAdvProfile" data-group="{{tabs.mistAdvProfile.group}}">
+	<div class="mist-adv-profile">
+		<fieldset class="mist-adv-religion">
+			<legend>{{localize "MIST_ADV.Profile.Religion"}}</legend>
+			{{#if mistProfile.editable}}
+				<input type="text" name="{{mistProfile.religionField}}" value="{{mistProfile.religion}}" list="mist-adv-religions-{{document.id}}" placeholder="{{localize "MIST_ADV.Profile.ReligionPlaceholder"}}">
+				<datalist id="mist-adv-religions-{{document.id}}">
+					{{#each mistProfile.religions as |name|}}<option value="{{name}}"></option>{{/each}}
+				</datalist>
+			{{else}}
+				<p class="mist-adv-value">{{#if mistProfile.religion}}{{mistProfile.religion}}{{else}}<span class="mist-adv-hint">{{localize "MIST_ADV.Profile.None"}}</span>{{/if}}</p>
+			{{/if}}
+		</fieldset>
+
+		<fieldset class="mist-adv-organizations">
+			<legend>{{localize "MIST_ADV.Profile.Organizations"}}</legend>
+			{{#if mistProfile.organizations.length}}
+				<ul class="mist-adv-org-list">
+					{{#each mistProfile.organizations as |org|}}
+						<li class="mist-adv-org {{#if org.missing}}missing{{/if}}">
+							<img src="{{org.img}}" alt="">
+							{{#if org.missing}}
+								<span class="name">{{org.name}}</span>
+							{{else}}
+								<a class="name" data-mist-adv-open="{{org.uuid}}" data-tooltip="MIST_ADV.Profile.Open">{{org.name}}</a>
+							{{/if}}
+							{{#if @root.mistProfile.editable}}
+								<a class="remove" data-mist-adv-remove-org="{{org.uuid}}" data-tooltip="MIST_ADV.Profile.Remove"><i class="fa-solid fa-xmark" inert></i></a>
+							{{/if}}
+						</li>
+					{{/each}}
+				</ul>
+			{{else}}
+				<p class="mist-adv-hint">{{localize "MIST_ADV.Profile.None"}}</p>
+			{{/if}}
+			{{#if mistProfile.editable}}
+				{{#if mistProfile.noOrganizations}}
+					<p class="mist-adv-hint">{{localize "MIST_ADV.Profile.NoOrganizations"}}</p>
+				{{else if mistProfile.available.length}}
+					<select data-mist-adv-add-org>
+						<option value="">{{localize "MIST_ADV.Profile.AddOrganization"}}</option>
+						{{#each mistProfile.available as |org|}}<option value="{{org.uuid}}">{{org.name}}</option>{{/each}}
+					</select>
+				{{/if}}
+			{{/if}}
+		</fieldset>
+	</div>
+</section>

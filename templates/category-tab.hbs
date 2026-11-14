@@ -1,0 +1,17 @@
+<section class="tab {{mistCategory.cssClass}} {{mistCategory.tab}} mist-adv-category" data-tab="{{mistCategory.tab}}" data-group="primary">
+	<div class="feature-section items-list">
+		{{#each mistCategory.features as |feature|}}
+			{{> "daggerheart.inventory-item"
+				item=feature
+				type="feature"
+				inactive=feature.system.inactive
+				actorType=@root.document.type
+				hideContextMenu=true
+				hideModifyControls=true
+				showActions=@root.editable
+			}}
+		{{else}}
+			<p class="mist-adv-hint">{{localize "MIST_ADV.Category.Empty" tab=(localize mistCategory.label)}}</p>
+		{{/each}}
+	</div>
+</section>

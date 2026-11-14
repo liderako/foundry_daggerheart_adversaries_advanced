@@ -1,0 +1,56 @@
+{
+	"id": "mist-age-adversaries-advanced",
+	"title": "The Mist Age - Adversaries Advanced",
+	"description": "More on the Daggerheart adversary sheet: a Profile tab with the adversary's religion and the organizations it belongs to (picked from The Mist Age - Geopolitics organizations), and feature categories the GM sets up in the module settings (e.g. psychic, social) — each one a tab of its own, and a feature's Settings tab picks which one it belongs to.",
+	"version": "0.1.0",
+	"compatibility": {
+		"minimum": "13",
+		"verified": "14"
+	},
+	"authors": [
+		{
+			"name": "asvirido"
+		}
+	],
+	"relationships": {
+		"systems": [
+			{
+				"id": "daggerheart",
+				"type": "system"
+			}
+		],
+		"recommends": [
+			{
+				"id": "mist-age-organization",
+				"type": "module",
+				"reason": "Organizations to pick on the Profile tab, and religion names to suggest."
+			}
+		]
+	},
+	"esmodules": [
+		"scripts/main.js"
+	],
+	"styles": [
+		"styles/adversaries.css"
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "languages/en.json"
+		},
+		{
+			"lang": "ru",
+			"name": "Русский",
+			"path": "languages/ru.json"
+		},
+		{
+			"lang": "uk",
+			"name": "Українська",
+			"path": "languages/uk.json"
+		}
+	],
+	"url": "https://github.com/liderako/foundry_daggerheart_adversaries_advanced",
+	"manifest": "https://github.com/liderako/foundry_daggerheart_adversaries_advanced/releases/latest/download/module.json",
+	"download": ""
+}
